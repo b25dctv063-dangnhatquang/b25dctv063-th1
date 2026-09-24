@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Minh Khang — Frontend Dev</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="#top" class="logo">git<span>hub</span>TH1</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">Giới thiệu</a></li>
+      <li><a href="#skills">Kỹ năng</a></li>
+      <li><a href="#projects">Dự án</a></li>
+      <li><a href="#contact">Liên hệ</a></li>
+    </ul>
+    <div class="nav-right">
+      <button id="themeBtn" title="Đổi giao diện">🌙</button>
+      <button id="burger" aria-label="menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="tag mono">// xin chào, mình là</div>
+      <h1>Nhật Quang — B25DCTV063</h1>
+      <p>Học sinh ngành AIoT</p>
+      <div class="cta">
+        <a href="#projects" class="btn btn-primary">Xem dự án</a>
+        <a href="#contact" class="btn btn-ghost">Liên hệ</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>Giới thiệu</h2>
+      <p class="eyebrow"></p>
+      <p style="color:var(--ink-dim); max-width:64ch;">
+        Sinh viên năm 2, đặc biệt giỏi tiếng Anh và ham học hỏi
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Kỹ năng</h2>
+      <p class="eyebrow">Những thứ mình dùng hàng ngày</p>
+      <div class="skill-grid">
+        <div class="skill-card"><h3>HTML / CSS</h3><p>Cơ bản</p><div class="lvl"><i style="width:90%"></i></div></div>
+        <div class="skill-card"><h3>JavaScript</h3><p>Cơ bản</p><div class="lvl"><i style="width:85%"></i></div></div>
+        <div class="skill-card"><h3>Python</h3><p>Cơ bản</p><div class="lvl"><i style="width:100%"></i></div></div>
+        <div class="skill-card"><h3>Ielts </h3><p>Reading 9.0 :)</p><div class="lvl"><i style="width:75%"></i></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Dự án</h2>
+      <p class="eyebrow">Vài project mình đã làm</p>
+      <input type="text" id="searchProj" placeholder="tìm theo tên hoặc tag...">
+      <div class="filter-bar" id="filterBar">
+        <button data-tag="all" class="active">Tất cả</button>
+        <button data-tag="python">python</button>
+        <button data-tag="js">JS</button>
+        <button data-tag="css">CSS</button>
+        <button data-tag="AIoT">AIoT</button>
+      </div>
+      <div class="proj-grid" id="projGrid">
+        <div class="proj-card" data-tags="python AIoT">
+          <h3>Eyesight - Camera thông minh</h3>
+          <p>Camera bảo mật bằng AI cao cấp.</p>
+          <div class="proj-tags"><span>python</span><span>AIoT</span></div>
+        </div>
+        <div class="proj-card" data-tags="js css">
+          <h3>To-do kéo thả</h3>
+          <p>Danh sách công việc drag & drop, chia cột theo trạng thái.</p>
+          <div class="proj-tags"><span>js</span><span>css grid</span></div>
+        </div>
+        <div class="proj-card" data-tags="js css">
+          <h3>Trang web profolio</h3>
+          <p>Bạn đang ở đây :).</p>
+          <div class="proj-tags"><span>HTML</span><span>js</span></div>
+        </div>
+        <div class="proj-card" data-tags="python">
+          <h3>Game rắn</h3>
+          <p>Game rắn điều khiển bằng tay và Camera</p>
+          <div class="proj-tags"><span>Python</span></div>
+        </div>
+                <div class="proj-card">
+          <h3>Coming soon...</h3>
+          <p>Những dự án tương lai sẽ được thêm vào đây</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Liên hệ</h2>
+      <p class="eyebrow">Hãy gửi cho tôi vài lời nhắn</p>
+      <form id="contactForm" novalidate>
+        <div>
+          <label for="name">Tên</label>
+          <input type="text" id="name" name="name">
+          <div class="err" id="errName"></div>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email">
+          <div class="err" id="errEmail"></div>
+        </div>
+        <div>
+          <label for="msg">Nội dung</label>
+          <textarea id="msg" name="msg" rows="4" maxlength="300"></textarea>
+          <div class="charcount"><span id="charCount">0</span>/300</div>
+          <div class="err" id="errMsg"></div>
+        </div>
+        <button type="submit" class="btn btn-primary">Gửi</button>
+        <div id="formMsg"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> Nhật Quang, made with passion and love for 0s and 1s.</span>
+    <span class="mono">built by hand, mostly</span>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
