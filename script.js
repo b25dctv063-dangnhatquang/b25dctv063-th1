@@ -1,7 +1,5 @@
-// năm hiện tại
 document.getElementById('yr').textContent = new Date().getFullYear();
 
-// menu hamburger
 const burger = document.getElementById('burger');
 const navLinks = document.getElementById('navLinks');
 burger.onclick = () => {
@@ -13,7 +11,6 @@ navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   navLinks.classList.remove('open');
 }));
 
-// dark/light toggle, nhớ lựa chọn cũ trong localStorage
 const themeBtn = document.getElementById('themeBtn');
 const root = document.documentElement;
 function applyTheme(t){
@@ -32,12 +29,10 @@ themeBtn.onclick = () => {
   try{ localStorage.setItem('theme', next); }catch(e){}
 };
 
-// đếm ký tự textarea
 const msgBox = document.getElementById('msg');
 const charCount = document.getElementById('charCount');
 msgBox.addEventListener('input', () => charCount.textContent = msgBox.value.length);
 
-// lọc + tìm kiếm dự án
 const filterBar = document.getElementById('filterBar');
 const searchBox = document.getElementById('searchProj');
 const cards = [...document.querySelectorAll('.proj-card')];
@@ -62,7 +57,6 @@ filterBar.addEventListener('click', e => {
 });
 searchBox.addEventListener('input', applyFilter);
 
-// validate form liên hệ
 const form = document.getElementById('contactForm');
 const formMsg = document.getElementById('formMsg');
 
